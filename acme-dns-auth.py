@@ -18,8 +18,6 @@ STORAGE_PATH = os.environ.get(
 
 # Whitelist for address ranges to allow the updates from
 # Example: ALLOW_FROM = ["192.168.10.0/24", "::1/128"]
-# Environment variable example:
-# export ACMEDNS_ALLOW_FROM='["192.168.10.0/24", "::1/128"]'
 try:
     ALLOW_FROM = json.loads(os.environ["ACMEDNS_ALLOW_FROM"])
 except KeyError:
